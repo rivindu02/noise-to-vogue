@@ -2,9 +2,35 @@
 
 **A wardrobe, from nothing.** A small unconditional DDPM trained on Fashion-MNIST, with a viewer that explains the mathematics through actual model predictions.
 
+[![Tests](https://github.com/rivindu02/noise-to-vogue/actions/workflows/test.yml/badge.svg)](https://github.com/rivindu02/noise-to-vogue/actions/workflows/test.yml)
+
+## Watch noise become a garment
+
+<table>
+  <tr><th>Linear schedule</th><th>Cosine schedule</th></tr>
+  <tr>
+    <td align="center"><img src="results/linear-denoising.gif" width="260" alt="Linear-schedule DDPM progressively denoising Gaussian noise into a garment"></td>
+    <td align="center"><img src="results/cosine-denoising.gif" width="260" alt="Cosine-schedule DDPM progressively denoising Gaussian noise into a garment"></td>
+  </tr>
+</table>
+
+Actual trajectories from the trained EMA models after **8,000 updates each**. Both use sampling seed **42** and execute all **200 reverse transitions**.
+
 ## Results
 
 Both schedules completed **8,000 updates** and were evaluated on **1,024 held-out examples**. Paired controls, the automated CPU test suite, and the live API smoke checks passed. See [measured results](results/REPORT.md), [full metrics](results/metrics.json), [test output](results/test-output.txt), and [smoke checks](results/smoke-test.json). Desktop and mobile browser checks passed; see [browser QA](results/browser-qa.json) and [screenshots](results/screenshots/).
+
+## Generated samples
+
+<table>
+  <tr><th>Linear · 8,000 updates</th><th>Cosine · 8,000 updates</th></tr>
+  <tr>
+    <td width="50%"><img src="results/linear-samples.png" width="460" alt="Grid of 32 unconditional Fashion-MNIST samples from the trained linear-schedule model"></td>
+    <td width="50%"><img src="results/cosine-samples.png" width="460" alt="Grid of 32 unconditional Fashion-MNIST samples from the trained cosine-schedule model"></td>
+  </tr>
+</table>
+
+**32 samples per schedule · sampling seed 42 · 28 × 28 pixels.** See the [measured comparison](results/REPORT.md) for the evaluation protocol and limits.
 
 ## What you can explore
 
@@ -14,6 +40,12 @@ Both schedules completed **8,000 updates** and were evaluated on **1,024 held-ou
 - **Schedule experiment:** separately trained linear and cosine schedules, training curves, held-out noise MSE, signal-matched measurements with standard errors, sample grids, and downloadable experiment records.
 
 There is no class conditioning or guidance in this version. The model never receives labels.
+
+<img src="results/screenshots/desktop-generation.png" width="960" alt="Generation studio with seed and schedule controls, denoising playback, clean-image prediction and forward-corruption comparison">
+
+The generation studio exposes each saved reverse-diffusion frame and the model's clean-image estimate.
+
+More views: [Noise microscope](results/screenshots/desktop-microscope.png) · [Schedule experiment](results/screenshots/desktop-experiment.png) · [Mobile layout](results/screenshots/mobile-generation.png).
 
 ## Setup and run
 
