@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/web/app.js",
+      "status": 200
+    },
+    {
+      "path": "/web/style.css",
+      "status": 200
+    },
+    {
+      "path": "/api/health",
+      "status": 200
+    },
+    {
+      "path": "/api/config",
+      "status": 200
+    },
+    {
+      "path": "/api/results",
+      "status": 200
+    },
+    {
+      "path": "/api/generate?schedule=linear&seed=42",
+      "status": 200
+    },
+    {
+      "path": "/api/generate?schedule=cosine&seed=42",
+      "status": 200
+    },
+    {
+      "path": "/api/generate?schedule=cosine&seed=123",
+      "status": 200
+    },
+    {
+      "path": "/api/forward?schedule=cosine&seed=42&index=0",
+      "status": 200
+    },
+    {
+      "path": "/api/inspect?schedule=cosine&seed=42&index=0&depth=100",
+      "status": 200
+    },
+    {
+      "path": "/api/inspect?schedule=linear&seed=123&index=17&depth=50",
+      "status": 200
+    }
+  ],
+  "live_seed_reproducibility": true,
+  "paired_controls": true,
+  "compact_weights_fallback": true
+}

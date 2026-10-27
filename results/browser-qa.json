@@ -1,0 +1,178 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-27T18:13:03.545Z",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.48",
+    "revision": "@52db4b25c0aa3038e9a1c6021428b136cc3cb5f",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.19"
+  },
+  "url": "http://127.0.0.1:17860",
+  "checks": [
+    {
+      "name": "trained models and measured results connected",
+      "passed": true
+    },
+    {
+      "name": "only active tab is in initial tab order",
+      "passed": true
+    },
+    {
+      "name": "reduced motion suppresses autoplay",
+      "passed": true
+    },
+    {
+      "name": "both trained schedules, all presets and fixed-seed reproducibility",
+      "passed": true
+    },
+    {
+      "name": "custom live seed reproducibility",
+      "passed": true
+    },
+    {
+      "name": "custom generation uses live model",
+      "passed": true
+    },
+    {
+      "name": "forward images, depth and independence caveat",
+      "passed": true
+    },
+    {
+      "name": "restart, speed, play and pause",
+      "passed": true
+    },
+    {
+      "name": "timeline scrub",
+      "passed": true
+    },
+    {
+      "name": "playback stops at final clean frame",
+      "passed": true
+    },
+    {
+      "name": "keyboard tab selection and focus",
+      "passed": true
+    },
+    {
+      "name": "microscope cosine index 0 depth 100",
+      "passed": true
+    },
+    {
+      "name": "raw and clipped MSE and equation coefficients at depth 100",
+      "passed": true
+    },
+    {
+      "name": "microscope linear index 17 depth 50",
+      "passed": true
+    },
+    {
+      "name": "raw and clipped MSE and equation coefficients at depth 50",
+      "passed": true
+    },
+    {
+      "name": "microscope cosine index 9999 depth 200",
+      "passed": true
+    },
+    {
+      "name": "raw and clipped MSE and equation coefficients at depth 200",
+      "passed": true
+    },
+    {
+      "name": "microscope linear index 1 depth 1",
+      "passed": true
+    },
+    {
+      "name": "raw and clipped MSE and equation coefficients at depth 1",
+      "passed": true
+    },
+    {
+      "name": "invalid microscope index -1 explained",
+      "passed": true
+    },
+    {
+      "name": "invalid microscope index 10000 explained",
+      "passed": true
+    },
+    {
+      "name": "measured charts and samples loaded",
+      "passed": true
+    },
+    {
+      "name": "measurement download works",
+      "passed": true
+    },
+    {
+      "name": "seed and schedule labels visible at 390px",
+      "passed": true
+    },
+    {
+      "name": "no page overflow at 390px in generation",
+      "passed": true
+    },
+    {
+      "name": "no page overflow at 390px in microscope",
+      "passed": true
+    },
+    {
+      "name": "no page overflow at 390px in experiment",
+      "passed": true
+    },
+    {
+      "name": "seed and schedule labels visible at 320px",
+      "passed": true
+    },
+    {
+      "name": "no page overflow at 320px in generation",
+      "passed": true
+    },
+    {
+      "name": "no page overflow at 320px in microscope",
+      "passed": true
+    },
+    {
+      "name": "no page overflow at 320px in experiment",
+      "passed": true
+    },
+    {
+      "name": "normal motion automatically plays",
+      "passed": true
+    },
+    {
+      "name": "invalid generation seed -1 explained",
+      "passed": true
+    },
+    {
+      "name": "invalid generation seed 4294967296 explained",
+      "passed": true
+    },
+    {
+      "name": "API failure is explained",
+      "passed": true
+    },
+    {
+      "name": "no browser console errors or uncaught exceptions",
+      "passed": true
+    }
+  ],
+  "expectedNetworkErrors": [
+    {
+      "source": "network",
+      "level": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "timestamp": 1793124783392.304,
+      "url": "http://127.0.0.1:17860/api/generate?seed=42&schedule=cosine",
+      "networkRequestId": "2263744.1021"
+    }
+  ],
+  "screenshots": [
+    "desktop-generation",
+    "desktop-microscope",
+    "desktop-experiment",
+    "mobile-generation",
+    "mobile-microscope",
+    "mobile-experiment"
+  ],
+  "limitations": "Missing-checkpoint error presentation uses an intercepted 503; real missing-model behavior is covered by pytest. No claim of assistive technology testing.",
+  "browser_version": "Brave Browser 156.1.98.60"
+}

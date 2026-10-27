@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "checks": {
+    "same_initial_weights": true,
+    "same_data_order_rng": true,
+    "same_noise_rng": true,
+    "same_data_order": true,
+    "same_data_cursor": true,
+    "linear_all_optimizer_updates_applied": true,
+    "cosine_all_optimizer_updates_applied": true
+  },
+  "runs": {
+    "linear": {
+      "training_steps": 8000,
+      "optimizer_step_counts": [
+        8000
+      ],
+      "elapsed_seconds": 298.714939604979,
+      "scaler": {
+        "scale": 1048576.0,
+        "growth_factor": 2.0,
+        "backoff_factor": 0.5,
+        "growth_interval": 2000,
+        "_growth_tracker": 0
+      }
+    },
+    "cosine": {
+      "training_steps": 8000,
+      "optimizer_step_counts": [
+        8000
+      ],
+      "elapsed_seconds": 297.20673274993896,
+      "scaler": {
+        "scale": 1048576.0,
+        "growth_factor": 2.0,
+        "backoff_factor": 0.5,
+        "growth_interval": 2000,
+        "_growth_tracker": 0
+      }
+    }
+  }
+}
